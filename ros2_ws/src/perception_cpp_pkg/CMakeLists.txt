@@ -57,6 +57,12 @@ install(TARGETS
   DESTINATION lib/${PROJECT_NAME}
 )
 
+# Install the launch directory
+install(DIRECTORY
+  launch
+  DESTINATION share/${PROJECT_NAME}/
+)
+
 # ========================
 # Testing
 # ========================
