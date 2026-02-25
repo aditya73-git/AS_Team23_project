@@ -8,7 +8,7 @@ The system architecture revolves around a Unity-based physics and rendering simu
 
 ### Packages
 
-#### 1. `simulation`
+<!-- #### 1. `simulation`
 The bridge and entry point connecting the ROS 2 software stack with the Unity physics engine.
 - **`Simulation.x86_64`**: The precompiled Unity environment executable. 
 - **`unity_ros` (C++)**: Acts as the interface between Unity and ROS 2 over local TCP/IP sockets (using `libsocket`). It processes raw bytes from Unity corresponding to simulated IMU, pose, and stereo/depth cameras, unpacking them into standard ROS 2 `sensor_msgs`, `nav_msgs`, and `geometry_msgs`.
@@ -36,4 +36,10 @@ Processes raw sensor data into actionable environmental formats.
 2. **State Corruption**: The `/true_pose` is intercepted by `state_estimate_corruptor_node` and degraded before being exposed to the controller as `/current_state_est`.
 3. **Control Output**: `controller_node` calculates required rotor velocities based on the drift-impacted state estimate and pushes these `Actuators` commands to `w_to_unity`.
 4. **ROS 2 $\rightarrow$ Unity**: `w_to_unity` pushes these actuator states back via TCP to the simulation core to apply physical torques.
-5. **Perception**: Concurrently, `depth_to_pointcloud_node` consumes simulated RealSense outputs to stream dense 3D point clouds (`/points`) to be consumed by the (to be implemented) planning modules.
+5. **Perception**: Concurrently, `depth_to_pointcloud_node` consumes simulated RealSense outputs to stream dense 3D point clouds (`/points`) to be consumed by the (to be implemented) planning modules. -->
+
+### useage of perception_pkg 
+## 1. `cd\ros2_ws` build `colcon build`
+## 2. source the setup `source install/setup.bash`
+## 3. launch simulation `ros2 launch simulation simulation.launch.py`
+## 4. Run the depth to pointcloud node ` ros2 run perception_pkg depth_to_pointcloud_node `
