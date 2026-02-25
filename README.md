@@ -39,7 +39,7 @@ Processes raw sensor data into actionable environmental formats.
 5. **Perception**: Concurrently, `depth_to_pointcloud_node` consumes simulated RealSense outputs to stream dense 3D point clouds (`/points`) to be consumed by the (to be implemented) planning modules. -->
 
 ### useage of perception_pkg 
-## 1. `cd\ros2_ws` build `colcon build`
-## 2. source the setup `source install/setup.bash`
-## 3. launch simulation `ros2 launch simulation simulation.launch.py`
-## 4. Run the depth to pointcloud node ` ros2 run perception_pkg depth_to_pointcloud_node `
+#### 1. `cd\ros2_ws` build `colcon build`
+#### 2. source the setup `source install/setup.bash`
+#### 3. launch simulation `ros2 launch simulation simulation.launch.py`
+#### 4. Run the depth to pointcloud node ` ros2 run perception_pkg depth_to_pointcloud_node `
