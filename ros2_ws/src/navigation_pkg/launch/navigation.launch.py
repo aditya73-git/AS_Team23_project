@@ -28,5 +28,18 @@ def generate_launch_description():
                 'robot_base_frame': 'true_body',
                 'global_frame': 'world'
             }]
+        ),
+
+        # 3. Trajectory Generator Node (The Controller)
+        # Listens to /planned_path and publishes a /trajectory
+        Node(
+            package='navigation_pkg',
+            executable='trajectory_generator_node',
+            name='trajectory_generator_node',
+            output='screen',
+            parameters=[{
+                'robot_base_frame': 'true_body',
+                'global_frame': 'world'
+            }]
         )
     ])

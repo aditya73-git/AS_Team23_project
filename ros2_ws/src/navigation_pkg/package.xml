@@ -20,6 +20,7 @@
   <depend>octomap_ros</depend>
   <depend>nav2_msgs</depend>
   <depend>trajectory_msgs</depend>
+  <depend>eigen</depend>
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
