@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>planning_pkg</name>
+  <name>navigation_pkg</name>
   <version>0.0.0</version>
   <description>TODO: Package description</description>
   <maintainer email="kotteaditya919@gmail.com">aditya</maintainer>
@@ -12,12 +12,14 @@
   <depend>rclcpp</depend>
   <depend>geometry_msgs</depend>
   <depend>nav_msgs</depend>
-  <depend>trajectory_msgs</depend>
+  <depend>sensor_msgs</depend>
   <depend>std_msgs</depend>
+  <depend>tf2</depend>
   <depend>tf2_ros</depend>
-  <depend>mav_msgs</depend>
-  <depend>mav_planning_msgs</depend>
   <depend>octomap_msgs</depend>
+  <depend>octomap_ros</depend>
+  <depend>nav2_msgs</depend>
+  <depend>trajectory_msgs</depend>
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
